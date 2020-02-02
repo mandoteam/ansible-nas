@@ -51,6 +51,7 @@ krusader_enabled: false
 
 # Backup & Restore
 timemachine_enabled: false
+syncthing_enabled: false
 
 # Software build and CI
 gitlab_enabled: false

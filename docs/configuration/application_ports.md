@@ -55,6 +55,9 @@ By default, applications can be found on the ports listed below.
 | Radarr          | 7878  |            |
 | Sickchill       | 8081  |            |
 | Sonarr          | 8989  |            |
+| Syncthing       | 8085  | HTTP       |
+| Syncthing       | 22000 | Data       |
+| Syncthing       | 21027 | Discovery  |
 | Tautulli        | 8185  |            |
 | The Lounge      | 9000  |            |
 | Time Machine    | 10445 | SMB        |
