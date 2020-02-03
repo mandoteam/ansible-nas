@@ -35,6 +35,7 @@ and a bunch of Docker containers.
 -   Content management with Joomla
 -   A dual panel local file manager
 -   Self-service media request web application
+-   A peer-to-peer file synchronization between devices
 
 ### Available Applications
 
@@ -100,6 +101,7 @@ and a bunch of Docker containers.
 -   [Radarr](https://radarr.video/) - for organising and downloading movies
 -   [Sickchill](https://sickchill.github.io/) - for managing TV episodes
 -   [Sonarr](https://sonarr.tv/) - for downloading and managing TV episodes
+-   [Syncthing](https://syncthing.net) - for synchronizing files across devices
 -   [Tautulli](http://tautulli.com/) - Monitor Your Plex Media Server
 -   [Telegraf](https://github.com/influxdata/telegraf) - Metrics collection agent
 -   [The Lounge](https://thelounge.chat) - Web based always-on IRC client
