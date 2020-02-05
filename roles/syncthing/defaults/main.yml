@@ -1,0 +1,10 @@
+---
+syncthing_enabled: false
+syncthing_available_externally: "false"
+
+# directories
+syncthing_data_directory: "{{ docker_home }}/syncthing/data"
+syncthing_config_directory: "{{ docker_home }}/syncthing/config"
+
+# network
+syncthing_port: "8384"
