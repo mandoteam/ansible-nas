@@ -1,0 +1,23 @@
+name: test
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run tests
+        env:
+          playbook: nas.yml
+          distro: ubuntu1804
+          test_syntax: true
+          test_playbook: false
+          test_idempotence: false
+        run: ${PWD}/tests/test.sh
