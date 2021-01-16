@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron:  '0 7 * * *'
+    - cron: "0 7 * * *"
     # scheduled at 07:00 every day
   workflow_dispatch:
 
@@ -9,21 +9,21 @@ jobs:
     runs-on: ubuntu-latest
     name: Sync upstream branch with upstream master
     steps:
-    - name: Checkout main
-      uses: actions/checkout@v2
-      with:
-        ref: upstream
-    - name: Pull (Fast-Forward) upstream changes
-      id: sync
-      uses: aormsby/Fork-Sync-With-Upstream-action@v2.1
-      with:
-        upstream_repository: davestephens/ansible-nas
-        upstream_branch: master
-        target_branch: upstream
-    # Display a message if 'sync' step had new commits
-    - name: Check for new commits
-      if: steps.sync.outputs.has_new_commits
-      run: echo "There were new commits."
-    # Print a helpful timestamp for your records
-    - name: Timestamp
-      run: date
+      - name: Checkout main
+        uses: actions/checkout@v2
+        with:
+          ref: upstream
+      - name: Pull (Fast-Forward) upstream changes
+        id: sync
+        uses: aormsby/Fork-Sync-With-Upstream-action@v2.1
+        with:
+          upstream_repository: davestephens/ansible-nas
+          upstream_branch: master
+          target_branch: upstream
+      # Display a message if 'sync' step had new commits
+      - name: Check for new commits
+        if: steps.sync.outputs.has_new_commits
+        run: echo "There were new commits."
+      # Print a helpful timestamp for your records
+      - name: Timestamp
+        run: date
