@@ -2,9 +2,12 @@
 syncthing_enabled: false
 syncthing_available_externally: "false"
 
-# directories
-syncthing_data_directory: "{{ docker_home }}/syncthing/data"
-syncthing_config_directory: "{{ docker_home }}/syncthing/config"
+syncthing_ui_port: "8384"
+syncthing_data_port: "22000"
+syncthing_discovery_port: "21027"
 
-# network
-syncthing_port: "8384"
+syncthing_config_directory: "{{ docker_home }}/syncthing/config"
+syncthing_data_directory: "{{ docker_home }}/syncthing/data"
+
+syncthing_user_id: "1000"
+syncthing_group_id: "1000"
